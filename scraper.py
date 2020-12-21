@@ -74,7 +74,9 @@ def main():
 
     print(all_data)
 
-
-main()
+threads = 2
+for i in range(threads):
+    t = threading.Thread(target=main)
+    t.start()
 
 
